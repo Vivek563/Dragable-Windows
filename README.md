@@ -43,7 +43,7 @@ npm install
 npm start
 ```
 
-5.Open your browser and navigate to **http://localhost:3000** to view the draggable windows in action.
+5. Open your browser and navigate to **http://localhost:5173** to view the draggable windows in action.
 
 ### Usage:
 
