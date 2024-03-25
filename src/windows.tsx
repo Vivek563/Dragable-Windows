@@ -86,6 +86,7 @@ const Window: React.FC<WindowProps> = ({ title, children }) => {
                          ref={windowRef}
                          drag
                          dragConstraints={dragConstraints}
+                         dragTransition={{ bounceStiffness: 800, bounceDamping: 25 }}
                          className={`absolute rounded-xl w-auto h-auto border-2 text-center border-white bg-[#BBBBBB] ${isMinimized ? "minimized" : ""}`}
                     >
                          <div ref={titleBarRef} className={`w-full bg-[#ffffff] flex justify-start pr-4  gap-[0.10rem] ${isMinimized ? "rounded-lg" : "rounded-t-lg"}  `}>
@@ -102,7 +103,7 @@ const Window: React.FC<WindowProps> = ({ title, children }) => {
 
                          {!isMinimized && (
                               //...content height....
-                              <div className={`bg-[#ffffff] w-[300px] h-[200px] m-2 rounded-xl p-3 flex items-center justify-center`}>{children}</div>
+                              <div className={`bg-[#ffffff]  m-2 rounded-xl p-3 flex items-center justify-center`}>{children}</div>
                          )}
                     </motion.div>
                </div>
